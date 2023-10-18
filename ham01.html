@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--    function b3 (a,b) {-->
+<!--        if (a>b){-->
+<!--            alert('a lon hon b:')-->
+<!--        } else {-->
+<!--            return a+b;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<!--<script>-->
+<!--    function binhphuong (a){-->
+<!--        return a**2-->
+<!--    }-->
+<!--</script>-->
+<!--<script>-->
+<!--    function gt(x){-->
+<!--        for (let i =1; i<=x; i++){-->
+<!--            tich*=i;-->
+<!--        }-->
+<!--        return tich;-->
+<!--    }-->
+<!--</script>-->
+<!--<script>-->
+<!--    function gtf(x) {-->
+<!--        if (x==1){-->
+<!--            return 1;-->
+<!--        }-->
+<!--        return x*gt(x-1);-->
+<!--    }-->
+<!--</script>-->
+<!--<script>-->
+<!--    function nhonhat(a1,b2,c3){-->
+<!--        if (a1<b2<c3){-->
+<!--            return a1;-->
+<!--        }-->
+<!--        else if (b2<a1<c3){-->
+<!--            return b2;-->
+<!--        }-->
+<!--        else if (c3<a1<b2){-->
+<!--            return c3;-->
+<!--        }-->
+<!--    }-->
+
+
+<!--</script>-->
+<button onclick="showlist()">list</button>
+<button onclick="showformADD()">ADD</button>
+<div id="disp"></div>
+<script>
+    let listproduct = ['Ip15', 'S23', 'Note 9']
+
+    function showlist() {
+        let str = '<h1>danh sach san pham</h1>'
+        str += `<p>so luong san pham:${listproduct.length}</p>`
+        for (let i = 0; i < listproduct.length; i++) {
+            str += `<h3>${listproduct[i]}<button onclick="">Edit</button></h3>`
+        }
+        document.getElementById('disp').innerHTML = str;
+    }
+
+    function showformADD() {
+        let str = '<input id="inp"> <button onclick="add()">create</button>'
+        document.getElementById('disp').innerHTML = str;
+    }
+
+</script>
+</body>
+</html>
